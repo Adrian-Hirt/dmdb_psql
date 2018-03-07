@@ -28,3 +28,12 @@ To stop the application, just enter `docker-compose down` in the terminal, when 
 
 ## Restarting again
 Just follow the steps in the Using chapter to use the app to any later point again. Thanks to the docker volumes, the databases will be persistens even when you shut down Postgres.
+
+## Removing the containers
+If you want to remove the containers, stop the application and use `docker container prune` and confirm to remove the containers.
+
+## Removing the image
+Use `docker images` to list all images, and `docker rmi IMAGE_ID` where `IMAGE ID` is the id of the image (fenglc/pgadmin4) from the list command.
+
+## Removing the volumes
+Use `docker volume remove pgdata` and `docker volume remove pgadmin` to remove the volumes
